@@ -1,2 +1,84 @@
-<h1>哈囉！這是我的 GitHub Pages 網站</h1>
-<p>這是我第一次嘗試架站。</p>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輪班者生存指南 | 找回你的白晝與黑夜</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 核心配色定義 */
+        :root {
+            --bg-deep: #1A237E;
+            --bg-card: #283593;
+            --accent: #FFD54F;
+        }
+        body { background-color: var(--bg-deep); color: #FFFFFF; scroll-behavior: smooth; }
+        .accent-text { color: var(--accent); }
+        .accent-btn { background-color: var(--accent); color: #1A237E; }
+        .card { background-color: var(--bg-card); transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-5px); border: 1px solid var(--accent); }
+    </style>
+</head>
+<body>
+
+    <header class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+            當全世界都睡了，<br><span class="accent-text italic">你的世界才剛開始。</span>
+        </h1>
+        <p class="text-gray-300 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+            我們是全台 200 萬輪班族的後盾。專注於優化你的生理節奏、飲食建議與深夜社交，讓輪班不再是健康的代價。
+        </p>
+        <a href="#vote" class="accent-btn px-10 py-4 rounded-full font-black text-xl shadow-lg hover:scale-105 transition">
+            搶先獲取回血指南
+        </a>
+    </header>
+
+    <section class="py-24 bg-black/10 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="card p-10 rounded-3xl">
+                <div class="text-5xl mb-6">🌙</div>
+                <h3 class="text-2xl font-bold mb-4 accent-text">睡眠失靈</h3>
+                <p class="text-gray-400">下班明明很累，躺下卻被陽光吵醒？我們幫你重新校正生理鐘。</p>
+            </div>
+            <div class="card p-10 rounded-3xl">
+                <div class="text-5xl mb-6">👥</div>
+                <h3 class="text-2xl font-bold mb-4 accent-text">社交斷裂</h3>
+                <p class="text-gray-400">當別人在聚餐，你在工作。我們建立一個凌晨三點也熱鬧的平行時空。</p>
+            </div>
+            <div class="card p-10 rounded-3xl">
+                <div class="text-5xl mb-6">⚡</div>
+                <h3 class="text-2xl font-bold mb-4 accent-text">健康紅字</h3>
+                <p class="text-gray-400">宵夜只有超商？針對熬夜研發的代謝飲食清單，守護你的肝指數。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vote" class="py-24 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-12">你最希望我們優先開發什麼服務？</h2>
+        <div class="max-w-3xl mx-auto space-y-4">
+            <button onclick="location.href='#signup'" class="w-full card p-6 rounded-xl flex justify-between items-center group">
+                <span class="text-xl">A. 科學補眠與光照計畫</span>
+                <span class="group-hover:translate-x-2 transition">➔</span>
+            </button>
+            <button onclick="location.href='#signup'" class="w-full card p-6 rounded-xl flex justify-between items-center group">
+                <span class="text-xl">B. 輪班者深夜互助社群</span>
+                <span class="group-hover:translate-x-2 transition">➔</span>
+            </button>
+            <button onclick="location.href='#signup'" class="w-full card p-6 rounded-xl flex justify-between items-center group">
+                <span class="text-xl">C. 熬夜體質專屬營養包</span>
+                <span class="group-hover:translate-x-2 transition">➔</span>
+            </button>
+        </div>
+    </section>
+
+    <footer id="signup" class="py-32 accent-btn text-center">
+        <h2 class="text-4xl font-black mb-6">加入計畫，找回主導權</h2>
+        <p class="text-blue-900 font-bold mb-10">輸入 Email，我們將送出《五分鐘快速入睡攻略》並通知你最新進度</p>
+        <div class="max-w-md mx-auto px-6">
+            <input type="email" placeholder="你的 Email" class="w-full p-4 rounded-xl mb-4 text-blue-900 focus:outline-none">
+            <button class="w-full bg-blue-900 text-white p-4 rounded-xl font-bold shadow-xl">立即加入</button>
+        </div>
+    </footer>
+
+</body>
+</html>
