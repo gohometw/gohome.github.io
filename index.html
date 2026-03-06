@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>深夜守護者 | 輪班工作者的生存空間</title>
+    <title>健康輪班 | 輪班工作者的生存空間</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* 定義發光效果 */
+        /* 發光效果 */
         .glow-text {
             text-shadow: 0 0 10px rgba(250, 204, 21, 0.5), 0 0 20px rgba(250, 204, 21, 0.3);
         }
         .glow-border:hover {
             box-shadow: 0 0 15px rgba(250, 204, 21, 0.4);
+            border-color: #FACC15;
         }
         body {
             background-color: #0A0A0A;
@@ -21,73 +22,174 @@
         .yellow-accent { color: #FACC15; }
         .yellow-bg { background-color: #FACC15; }
         .card-dark { background-color: #171717; border: 1px solid #262626; }
+        
+        /* Threads 專用樣式 */
+        .threads-btn {
+            background-color: #ffffff;
+            color: #000000;
+            transition: all 0.3s ease;
+        }
+        .threads-btn:hover {
+            background-color: #e5e5e5;
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body class="font-sans">
 
     <header class="min-h-screen flex flex-col justify-center items-center text-center px-6">
         <div class="mb-4 px-3 py-1 border border-[#FACC15] text-[#FACC15] text-xs uppercase tracking-widest rounded-full">
-            Shift Worker Community
+            健康輪班
         </div>
-        <h1 class="text-5xl md:text-7xl font-black mb-6 glow-text">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 glow-text leading-tight">
             當世界熄燈，<br><span class="yellow-accent">我們為你留一盞。</span>
         </h1>
         <p class="text-neutral-400 text-lg md:text-xl max-w-2xl mb-10">
-            針對輪班族群設計的生存支持系統。解決混亂的生理鐘、被孤立的社交生活、以及透支的健康。
+          全台 200 萬輪班族的生存支持系統<br>我們懂你的黑夜與白晝，致力於找回被班表偷走的健康與社交。
         </p>
-        <a href="#vote" class="yellow-bg text-black px-10 py-4 rounded-md font-black text-xl hover:bg-yellow-300 transition-all active:scale-95">
-            搶先獲取：深夜回血指南
-        </a>
+        <a href="#signup" class="yellow-bg text-black px-10 py-4 rounded-md font-black text-xl hover:bg-yellow-300 transition-all active:scale-95">
+    鎖定發佈通知
+</a>
     </header>
 
-    <section class="py-24 px-6 border-y border-neutral-900">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-            <div class="text-left">
-                <span class="text-4xl mb-4 block">🌗</span>
-                <h3 class="text-xl font-bold mb-3 yellow-accent">睡眠債務</h3>
-                <p class="text-neutral-500">不再只是「睡滿幾小時」，我們教你如何透過科學光控，在白天也能進入深度睡眠。</p>
+<section class="py-24 px-6 border-y border-neutral-900 bg-[#080808]">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 yellow-accent tracking-tight glow-text">找回被班表偷走的生活節奏</h2>
+                <p class="text-neutral-400 text-lg max-w-3xl mx-auto leading-relaxed">
+                    輪班不只是工作時間的改變，更是對生理機能的嚴峻挑戰。<br class="hidden md:block">
+                    我們針對三大核心痛點，為你量身打造科學化的深夜生存策略。
+                </p>
             </div>
-            <div class="text-left">
-                <span class="text-4xl mb-4 block">☕</span>
-                <h3 class="text-xl font-bold mb-3 yellow-accent">代謝修復</h3>
-                <p class="text-neutral-500">凌晨三點的宵夜怎麼吃才不傷身？針對輪班者設計的微營養方案。</p>
-            </div>
-            <div class="text-left">
-                <span class="text-4xl mb-4 block">🔌</span>
-                <h3 class="text-xl font-bold mb-3 yellow-accent">社交電力</h3>
-                <p class="text-neutral-500">在對的時間補眠，在對的時間醒來。讓你的生理時鐘能完美對齊社交圈。</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="card-dark p-8 rounded-2xl glow-border transition-all">
+                    <div class="text-4xl mb-6 flex justify-between items-center">
+                        <span>⏰</span>
+                        <span class="text-xs border border-neutral-700 px-2 py-1 rounded text-neutral-500 uppercase">Sleep</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 yellow-accent">睡眠失靈 → 債務修復</h3>
+                    <p class="text-neutral-300 mb-4">下班明明很累，躺下卻被陽光與噪音吵醒？身體永遠在調時差。</p>
+                    <div class="pt-4 border-t border-neutral-800">
+                        <p class="text-sm text-neutral-400">
+                            <strong class="yellow-accent">對策：</strong>不再只是「睡滿幾小時」，教你透過科學光控，在白天也能進入深度睡眠。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-dark p-8 rounded-2xl glow-border transition-all">
+                    <div class="text-4xl mb-6 flex justify-between items-center">
+                        <span>⚡</span>
+                        <span class="text-xs border border-neutral-700 px-2 py-1 rounded text-neutral-500 uppercase">Health</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 yellow-accent">健康紅字 → 代謝修復</h3>
+                    <p class="text-neutral-300 mb-4">凌晨三點的宵夜、混亂的代謝。看著體檢單，你開始懷疑這份工作的代價。</p>
+                    <div class="pt-4 border-t border-neutral-800">
+                        <p class="text-sm text-neutral-400">
+                            <strong class="yellow-accent">對策：</strong>凌晨三點的宵夜怎麼吃才不傷身？提供針對輪班者設計的微營養方案。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-dark p-8 rounded-2xl glow-border transition-all">
+                    <div class="text-4xl mb-6 flex justify-between items-center">
+                        <span>👥</span>
+                        <span class="text-xs border border-neutral-700 px-2 py-1 rounded text-neutral-500 uppercase">Social</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 yellow-accent">社交斷裂 → 社交電力</h3>
+                    <p class="text-neutral-300 mb-4">你的早安是別人的晚安。聚餐永遠缺席，漸漸成了朋友圈的邊緣人。</p>
+                    <div class="pt-4 border-t border-neutral-800">
+                        <p class="text-sm text-neutral-400">
+                            <strong class="yellow-accent">對策：</strong>在對的時間補眠，在對的時間醒來。讓你的生理時鐘能完美對齊社交圈。
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="vote" class="py-24 px-6">
+   <section class="py-24 px-6 bg-[#080808]">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-2xl font-bold mb-10 text-center uppercase tracking-widest">下一步，你最需要什麼？</h2>
-            <div class="space-y-4">
-                <button onclick="scrollToForm()" class="w-full card-dark p-6 rounded-lg flex justify-between items-center glow-border transition-all group">
-                    <span class="text-lg group-hover:yellow-accent transition">生理時鐘 AI 排班助手</span>
-                    <span class="yellow-accent">VOTE</span>
-                </button>
-                <button onclick="scrollToForm()" class="w-full card-dark p-6 rounded-lg flex justify-between items-center glow-border transition-all group">
-                    <span class="text-lg group-hover:yellow-accent transition">深夜限定匿名加油站</span>
-                    <span class="yellow-accent">VOTE</span>
-                </button>
-                <button onclick="scrollToForm()" class="w-full card-dark p-6 rounded-lg flex justify-between items-center glow-border transition-all group">
-                    <span class="text-lg group-hover:yellow-accent transition">輪班族專屬機能營養包</span>
-                    <span class="yellow-accent">VOTE</span>
-                </button>
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 yellow-accent tracking-widest italic glow-text">深夜生存法則</h2>
+                <p class="text-neutral-500 text-sm uppercase tracking-widest">Late-Night Survival Guidelines</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="card-dark p-8 rounded-xl border-l-4 border-[#FACC15] group hover:bg-[#1A1A1A] transition-all">
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">🕶️</span>
+                        <div>
+                            <h3 class="text-lg font-bold yellow-accent mb-2">避開晨光：保護褪黑激素</h3>
+                            <p class="text-neutral-400 leading-relaxed">
+                                下班路上的強烈陽光會誤導大腦進入「開機模式」。戴上墨鏡，是你確保回家後能迅速進入夢鄉的最後防線。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-dark p-8 rounded-xl border-l-4 border-[#FACC15] group hover:bg-[#1A1A1A] transition-all">
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">☕</span>
+                        <div>
+                            <h3 class="text-lg font-bold yellow-accent mb-2">咖啡因截斷：拒絕假性清醒</h3>
+                            <p class="text-neutral-400 leading-relaxed">
+                                睡前 6 小時應停止攝取咖啡因。避免身體在極度疲勞時，大腦卻被迫處於「假性超頻」狀態，導致入睡困難。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-dark p-8 rounded-xl border-l-4 border-[#FACC15] group hover:bg-[#1A1A1A] transition-all">
+                    <div class="flex items-start gap-4">
+                        <span class="text-2xl">🚿</span>
+                        <div>
+                            <h3 class="text-lg font-bold yellow-accent mb-2">核心降溫：模擬入睡信號</h3>
+                            <p class="text-neutral-300 leading-relaxed text-sm">
+                                <span class="text-neutral-400">睡前 90 分鐘沖個溫水澡。當洗完澡體溫開始下降時，會啟動天然的「入睡信號」，幫你跳過翻來覆去的焦慮期。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center animate-bounce text-neutral-700">
+                <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
             </div>
         </div>
     </section>
+              
 
-    <footer id="signup" class="py-32 px-6 border-t border-neutral-900 text-center">
-        <h2 class="text-3xl font-bold mb-4">準備好重新掌控生活了嗎？</h2>
-        <p class="text-neutral-400 mb-10">留下 Email，我們將在正式上線時第一時間通知你。</p>
-        <form class="max-w-md mx-auto flex flex-col md:flex-row gap-2">
-            <input type="email" placeholder="Email Address" class="flex-1 bg-neutral-900 border border-neutral-800 p-4 rounded-md focus:border-[#FACC15] outline-none">
-            <button class="yellow-bg text-black px-8 py-4 rounded-md font-bold">加入</button>
-        </form>
-        <p class="mt-8 text-xs text-neutral-600 uppercase tracking-widest">Stay Awake. Stay Healthy.</p>
+   <footer id="signup" class="py-32 px-6 border-t border-neutral-900 bg-[#050505] text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 glow-text yellow-accent">準備好重新掌控生活了嗎？</h2>
+                <p class="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    追蹤 Threads，鎖定《五分鐘快速入睡攻略》發佈通知。 <br>奪回主導權，從這個下班後開始。
+
+                </p>
+            </div>
+
+            <div class="max-w-md mx-auto">
+                <div class="flex flex-col gap-4 mb-8">
+                    
+
+                <a href="https://www.threads.net/@你的帳號" target="_blank" 
+                   class="threads-btn w-full inline-flex items-center justify-center gap-3 px-8 py-5 rounded-xl font-black text-xl shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(250,204,21,0.3)] transition-all">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 24c-6.627 0-12-5.373-12-12s5.373-12 12-12 12 5.373 12 12-5.373 12-12 12zm0-2c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zM12 5c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7z"/>
+                    </svg>
+                    立即追蹤 Threads
+                </a>
+            </div>
+
+            <p class="mt-16 text-xs text-neutral-700 uppercase tracking-[0.3em]">© 2026 健康輪班 All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
