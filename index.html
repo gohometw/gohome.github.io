@@ -3,82 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>輪班者生存指南 | 找回你的白晝與黑夜</title>
+    <title>深夜守護者 | 輪班工作者的生存空間</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* 核心配色定義 */
-        :root {
-            --bg-deep: #1A237E;
-            --bg-card: #283593;
-            --accent: #FFD54F;
+        /* 定義發光效果 */
+        .glow-text {
+            text-shadow: 0 0 10px rgba(250, 204, 21, 0.5), 0 0 20px rgba(250, 204, 21, 0.3);
         }
-        body { background-color: var(--bg-deep); color: #FFFFFF; scroll-behavior: smooth; }
-        .accent-text { color: var(--accent); }
-        .accent-btn { background-color: var(--accent); color: #1A237E; }
-        .card { background-color: var(--bg-card); transition: all 0.3s ease; }
-        .card:hover { transform: translateY(-5px); border: 1px solid var(--accent); }
+        .glow-border:hover {
+            box-shadow: 0 0 15px rgba(250, 204, 21, 0.4);
+        }
+        body {
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            scroll-behavior: smooth;
+        }
+        .yellow-accent { color: #FACC15; }
+        .yellow-bg { background-color: #FACC15; }
+        .card-dark { background-color: #171717; border: 1px solid #262626; }
     </style>
 </head>
-<body>
+<body class="font-sans">
 
-    <header class="h-screen flex flex-col justify-center items-center text-center px-4">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
-            當全世界都睡了，<br><span class="accent-text italic">你的世界才剛開始。</span>
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <div class="mb-4 px-3 py-1 border border-[#FACC15] text-[#FACC15] text-xs uppercase tracking-widest rounded-full">
+            Shift Worker Community
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black mb-6 glow-text">
+            當世界熄燈，<br><span class="yellow-accent">我們為你留一盞。</span>
         </h1>
-        <p class="text-gray-300 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
-            我們是全台 200 萬輪班族的後盾。專注於優化你的生理節奏、飲食建議與深夜社交，讓輪班不再是健康的代價。
+        <p class="text-neutral-400 text-lg md:text-xl max-w-2xl mb-10">
+            針對輪班族群設計的生存支持系統。解決混亂的生理鐘、被孤立的社交生活、以及透支的健康。
         </p>
-        <a href="#vote" class="accent-btn px-10 py-4 rounded-full font-black text-xl shadow-lg hover:scale-105 transition">
-            搶先獲取回血指南
+        <a href="#vote" class="yellow-bg text-black px-10 py-4 rounded-md font-black text-xl hover:bg-yellow-300 transition-all active:scale-95">
+            搶先獲取：深夜回血指南
         </a>
     </header>
 
-    <section class="py-24 bg-black/10 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-            <div class="card p-10 rounded-3xl">
-                <div class="text-5xl mb-6">🌙</div>
-                <h3 class="text-2xl font-bold mb-4 accent-text">睡眠失靈</h3>
-                <p class="text-gray-400">下班明明很累，躺下卻被陽光吵醒？我們幫你重新校正生理鐘。</p>
+    <section class="py-24 px-6 border-y border-neutral-900">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+            <div class="text-left">
+                <span class="text-4xl mb-4 block">🌗</span>
+                <h3 class="text-xl font-bold mb-3 yellow-accent">睡眠債務</h3>
+                <p class="text-neutral-500">不再只是「睡滿幾小時」，我們教你如何透過科學光控，在白天也能進入深度睡眠。</p>
             </div>
-            <div class="card p-10 rounded-3xl">
-                <div class="text-5xl mb-6">👥</div>
-                <h3 class="text-2xl font-bold mb-4 accent-text">社交斷裂</h3>
-                <p class="text-gray-400">當別人在聚餐，你在工作。我們建立一個凌晨三點也熱鬧的平行時空。</p>
+            <div class="text-left">
+                <span class="text-4xl mb-4 block">☕</span>
+                <h3 class="text-xl font-bold mb-3 yellow-accent">代謝修復</h3>
+                <p class="text-neutral-500">凌晨三點的宵夜怎麼吃才不傷身？針對輪班者設計的微營養方案。</p>
             </div>
-            <div class="card p-10 rounded-3xl">
-                <div class="text-5xl mb-6">⚡</div>
-                <h3 class="text-2xl font-bold mb-4 accent-text">健康紅字</h3>
-                <p class="text-gray-400">宵夜只有超商？針對熬夜研發的代謝飲食清單，守護你的肝指數。</p>
+            <div class="text-left">
+                <span class="text-4xl mb-4 block">🔌</span>
+                <h3 class="text-xl font-bold mb-3 yellow-accent">社交電力</h3>
+                <p class="text-neutral-500">在對的時間補眠，在對的時間醒來。讓你的生理時鐘能完美對齊社交圈。</p>
             </div>
         </div>
     </section>
 
-    <section id="vote" class="py-24 px-6 text-center">
-        <h2 class="text-3xl font-bold mb-12">你最希望我們優先開發什麼服務？</h2>
-        <div class="max-w-3xl mx-auto space-y-4">
-            <button onclick="location.href='#signup'" class="w-full card p-6 rounded-xl flex justify-between items-center group">
-                <span class="text-xl">A. 科學補眠與光照計畫</span>
-                <span class="group-hover:translate-x-2 transition">➔</span>
-            </button>
-            <button onclick="location.href='#signup'" class="w-full card p-6 rounded-xl flex justify-between items-center group">
-                <span class="text-xl">B. 輪班者深夜互助社群</span>
-                <span class="group-hover:translate-x-2 transition">➔</span>
-            </button>
-            <button onclick="location.href='#signup'" class="w-full card p-6 rounded-xl flex justify-between items-center group">
-                <span class="text-xl">C. 熬夜體質專屬營養包</span>
-                <span class="group-hover:translate-x-2 transition">➔</span>
-            </button>
+    <section id="vote" class="py-24 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-10 text-center uppercase tracking-widest">下一步，你最需要什麼？</h2>
+            <div class="space-y-4">
+                <button onclick="scrollToForm()" class="w-full card-dark p-6 rounded-lg flex justify-between items-center glow-border transition-all group">
+                    <span class="text-lg group-hover:yellow-accent transition">生理時鐘 AI 排班助手</span>
+                    <span class="yellow-accent">VOTE</span>
+                </button>
+                <button onclick="scrollToForm()" class="w-full card-dark p-6 rounded-lg flex justify-between items-center glow-border transition-all group">
+                    <span class="text-lg group-hover:yellow-accent transition">深夜限定匿名加油站</span>
+                    <span class="yellow-accent">VOTE</span>
+                </button>
+                <button onclick="scrollToForm()" class="w-full card-dark p-6 rounded-lg flex justify-between items-center glow-border transition-all group">
+                    <span class="text-lg group-hover:yellow-accent transition">輪班族專屬機能營養包</span>
+                    <span class="yellow-accent">VOTE</span>
+                </button>
+            </div>
         </div>
     </section>
 
-    <footer id="signup" class="py-32 accent-btn text-center">
-        <h2 class="text-4xl font-black mb-6">加入計畫，找回主導權</h2>
-        <p class="text-blue-900 font-bold mb-10">輸入 Email，我們將送出《五分鐘快速入睡攻略》並通知你最新進度</p>
-        <div class="max-w-md mx-auto px-6">
-            <input type="email" placeholder="你的 Email" class="w-full p-4 rounded-xl mb-4 text-blue-900 focus:outline-none">
-            <button class="w-full bg-blue-900 text-white p-4 rounded-xl font-bold shadow-xl">立即加入</button>
-        </div>
+    <footer id="signup" class="py-32 px-6 border-t border-neutral-900 text-center">
+        <h2 class="text-3xl font-bold mb-4">準備好重新掌控生活了嗎？</h2>
+        <p class="text-neutral-400 mb-10">留下 Email，我們將在正式上線時第一時間通知你。</p>
+        <form class="max-w-md mx-auto flex flex-col md:flex-row gap-2">
+            <input type="email" placeholder="Email Address" class="flex-1 bg-neutral-900 border border-neutral-800 p-4 rounded-md focus:border-[#FACC15] outline-none">
+            <button class="yellow-bg text-black px-8 py-4 rounded-md font-bold">加入</button>
+        </form>
+        <p class="mt-8 text-xs text-neutral-600 uppercase tracking-widest">Stay Awake. Stay Healthy.</p>
     </footer>
 
+    <script>
+        function scrollToForm() {
+            document.getElementById('signup').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
